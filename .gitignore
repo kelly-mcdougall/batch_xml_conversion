@@ -1,1 +1,9 @@
 xslt/jat2silverchair.xsl
+.DS_Store
+.gitignore
+/tracking
+/source_files
+scraper/*csv
+scraper/*json
+log_file.log
+/venv
