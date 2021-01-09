@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT submission (issue_meta, issue_file*, article+)>
+<!ATTLIST submission
+        version CDATA #REQUIRED
+        onValidationFailure (report|halt) "report"
+>
+<!ELEMENT issue_meta (jcode, coverdate, stringdate?, volume?, issue?, sequence?)>
+<!ATTLIST issue_meta
+    area (staging|production) "staging"
+    type (normal | axa | just_accepted | forthcoming | part | errata | vol_suppl | special) "normal"
+    doi CDATA #IMPLIED
+>
+<!ELEMENT jcode (#PCDATA)>
+<!ELEMENT coverdate (#PCDATA)>
+<!ELEMENT stringdate (#PCDATA)>
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT issue (#PCDATA)>
+<!ELEMENT sequence (#PCDATA)>
+<!ELEMENT issue_file (#PCDATA)>
+<!ELEMENT article (title?, authors?, fpage?, lpage?)>
+<!ATTLIST article doi CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (#PCDATA)>
+<!ELEMENT fpage (#PCDATA)>
+<!ELEMENT lpage (#PCDATA)>

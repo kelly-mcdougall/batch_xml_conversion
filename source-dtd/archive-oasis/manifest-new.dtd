@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT submission (makeLive?, issue_file*, issue_attachment*, article*)>
+<!ATTLIST submission
+        version CDATA #FIXED "3.0"
+        issueDoi CDATA #REQUIRED
+        onValidationFailure (report|halt) "report"
+        checkContents (yes|no|replace) "no"
+>
+<!ELEMENT makeLive EMPTY>
+<!ATTLIST makeLive
+		onCondition (never|noWarnings|noErrors|noFatals) "never"
+		onDate CDATA #IMPLIED>
+<!ELEMENT issue_file (#PCDATA)>
+<!ELEMENT issue_attachment (#PCDATA)>
+<!ELEMENT article (article_file*)>
+<!ATTLIST article doi CDATA #REQUIRED>
+<!ELEMENT article_file (#PCDATA)>
